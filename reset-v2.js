@@ -1,0 +1,2 @@
+// System clock helper: day changes at 12:00 local time.
+window.jessySystemDateKey=function(d=new Date()){const x=new Date(d);if(x.getHours()<12)x.setDate(x.getDate()-1);const y=x.getFullYear();const m=String(x.getMonth()+1).padStart(2,'0');const day=String(x.getDate()).padStart(2,'0');return `${y}-${m}-${day}`};
